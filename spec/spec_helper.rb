@@ -16,8 +16,9 @@
 
 
 require 'simplecov'
-require 'simplecov-console'
-require "./app.rb"
+require "features/web_helpers.rb"
+#require 'simplecov-console'
+# require "./app.rb"
 require "capybara"
 require "rspec"
 require "capybara/rspec"
@@ -30,14 +31,13 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
 ])
 SimpleCov.start
 
-ENV['RACK_ENV'] = 'test'
+# ENV['RACK_ENV'] = 'test'
 
 # require our Sinatra app file
 require File.join(File.dirname(__FILE__), '..', 'app.rb')
 
 # tell Capybara about our app class
 Capybara.app = Battle
-
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
