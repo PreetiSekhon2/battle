@@ -1,8 +1,8 @@
-<%=$player1.show_name%> vs. <%=$player2.show_name%>
+<%=@game.player1.show_name%> vs. <%=@game.player2.show_name%>
 <br>
 <br>
-<%=$player2.show_name%>: <%=$player2.show_score%>HP
+<%=@game.player1.show_name%>  : <%=@game.player1.get_score%>HP
 <br>
-<%=$player1.show_name%>: <%=$player1.show_score%>HP
+<%=@game.player2.show_name%>  : <%=@game.player2.get_score%>HP
 <br>
 <a href="/attack">Attack</a>

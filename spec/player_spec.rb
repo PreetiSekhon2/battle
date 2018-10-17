@@ -10,17 +10,17 @@ describe Player do
   end
 
   it "returns points of a player" do
-    expect(john.show_score).to eq described_class::DEFAULT_HIT_POINTS
+    expect(john.get_score).to eq described_class::DEFAULT_HIT_POINTS
   end
 
   it "receives damage and decreases score" do
     john.receive_damage
-    expect(john.show_score).to eq 50
+    expect(john.get_score).to eq 50
   end
 
   it "decrements the score" do
     john.decrease_score
-    expect(john.show_score).to eq 50
+    expect(john.get_score).to eq 50
   end
 
 end

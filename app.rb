@@ -4,39 +4,36 @@ require "./lib/game.rb"
 
 
 class Battle < Sinatra::Base
-  $game = Game.new
   enable :sessions
-  $player1 = nil
-  $player2 = nil
-
-  get "/test" do
-    'Testing infrastructure working!'
-  end
 
   get "/" do
     erb(:index)
   end
 
   post '/names' do
-    $player1 = Player.new(params[:player_1_name])
-    $player2 = Player.new(params[:player_2_name])
+    $game = Game.new(Player.new(params[:player_1_name]),Player.new(params[:player_2_name]))
     redirect "/play"
   end
 
   get '/play' do
-    $player1.show_name
-    $player2.show_name
-    erb :play
+    #p $game.complete?
+    @game = $game
+    if $game.complete?
+      erb :complete
+    else
+      erb :play
+    end
+    # erb :play
   end
 
-  post '/play' do
-    get "/test"
+  get '/switch-turn' do
+    $game.switch_attacked
+    redirect "/play"
   end
 
   get '/attack' do
-    $player1.show_name
-    $player2.show_name
-    $game.attack($player2)
+    @game = $game
+    @game.attack(@game.get_current_attacked)
     erb :attack
   end
 

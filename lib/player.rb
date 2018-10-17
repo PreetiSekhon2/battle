@@ -10,7 +10,7 @@ class Player
     @name
   end
 
-  def show_score
+  def get_score
     @score
   end
 

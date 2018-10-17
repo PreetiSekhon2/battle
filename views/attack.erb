@@ -1,3 +1,4 @@
-<%=$player1.show_name%> attacked <%=$player2.show_name%>
-
-<a href="/play">Play</a>
+Currently being attacked:  <%=@game.get_current_attacked.show_name%>
+<br>
+<br>
+<a href="/switch-turn">Play</a>
