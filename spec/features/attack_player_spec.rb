@@ -1,15 +1,15 @@
-feature "attack player" do
-  scenario "see Player 1 attack player 2" do
+feature "Attack player" do
+  scenario "See Player 1 attack player 2" do
     sign_in_and_play
-    click_link "Attack"
-    expect(page).to have_content "Currently being attacked: Mittens"
+    click_button "Attack"
+    expect(page).to have_content "Currently Dave is attacking Mittens"
   end
 
-  scenario "see Player 2 attack player 1" do
+  scenario "See Player 2 attack player 1" do
     sign_in_and_play
     play_one_round
-    click_link "Attack"
-    expect(page).to have_content "Currently being attacked: Dave"
+    click_button "Attack"
+    expect(page).to have_content "Currently Mittens is attacking Dave"
   end
 
 end

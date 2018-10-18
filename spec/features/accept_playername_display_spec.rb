@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-feature 'Acceot names' do
-  scenario 'submitting names' do
+feature 'Accept names' do
+  scenario 'Submitting names' do
     sign_in_and_play
     expect(page).to have_content 'Dave vs. Mittens'
   end

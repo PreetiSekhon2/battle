@@ -14,13 +14,21 @@ describe Player do
   end
 
   it "receives damage and decreases score" do
-    john.receive_damage
-    expect(john.get_score).to eq 50
+    score = john.get_score
+    john.receive_damage(1)
+    expect(john.get_score).to be < score
+  end
+
+  it "receives HIGH damage and decreases score multiple times" do
+    score = john.get_score
+    expect(john).to receive(:decrease_score).exactly(3).times
+    john.receive_damage(3)
   end
 
   it "decrements the score" do
+    score = john.get_score
     john.decrease_score
-    expect(john.get_score).to eq 50
+    expect(john.get_score).to be < score
   end
 
 end

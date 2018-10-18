@@ -1,4 +1,7 @@
-Currently being attacked:  <%=@game.get_current_attacked.show_name%>
+<h1>Currently <%=@game.get_current_attacker.show_name%>
+is attacking <%=@game.get_current_attacked.show_name%></h1>
+<h2>The attack move level is <%=@game.get_move%></h2>
+<h3>The attack will lead to <%=@game.paralyse? == true ? "PARALYSIS" : "NO PARALYSIS"%> for <%=@game.get_current_attacked.show_name%></h3>
 <br>
-<br>
+
 <a href="/switch-turn">Play</a>

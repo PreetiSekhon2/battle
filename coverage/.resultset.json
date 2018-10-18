@@ -30,6 +30,20 @@
         null,
         null
       ],
+      "/Users/preetiudas/projects/battle/spec/features/computer_opponent_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
       "/Users/preetiudas/projects/battle/spec/features/hit_points_spec.rb": [
         1,
         null,
@@ -57,9 +71,38 @@
         1,
         1,
         1,
-        12,
+        1,
+        19,
+        19,
         null,
         1,
+        null,
+        null
+      ],
+      "/Users/preetiudas/projects/battle/spec/features/paralyse_opponent_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/preetiudas/projects/battle/spec/features/random_damage_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
         null,
         null
       ],
@@ -68,7 +111,6 @@
         null,
         1,
         null,
-        1,
         1,
         1,
         1,
@@ -82,7 +124,6 @@
         null,
         1,
         null,
-        1,
         1,
         1,
         1,
@@ -117,7 +158,6 @@
         null,
         1,
         1,
-        1,
         null,
         null,
         null
@@ -127,7 +167,7 @@
         null,
         1,
         null,
-        5,
+        6,
         1,
         null,
         1,
@@ -141,8 +181,16 @@
         1,
         1,
         1,
+        1,
         null,
         null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
         1,
         1,
         1,
@@ -151,6 +199,6 @@
         null
       ]
     },
-    "timestamp": 1539806260
+    "timestamp": 1539884181
   }
 }

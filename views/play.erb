@@ -1,8 +1,17 @@
-<%=@game.player1.show_name%> vs. <%=@game.player2.show_name%>
+<h1><%=@game.player1.show_name%> vs. <%=@game.player2.show_name%></h1>
+<h2>There is <%=@game.get_bonus ? "a surprise bonus " : "no surprise bonus "%> for the attacker: <%=@game.get_current_attacker.show_name%>
+<h2><%=@game.player1.show_name%>  : <%=@game.player1.get_score%>HP</h2>
+<h2><%=@game.player2.show_name%>  : <%=@game.player2.get_score%>HP</h2>
+<form action="/attack" method="post" id = "form2">
+<h2><%=@game.get_current_attacker.show_name%>: Its your turn. Select the move you want to play</h2>
+<select name = "move" >
+  <option value=1 selected="selected" >Easy Move</option>
+  <option value=2>Medium Move</option>
+  <option value=3>Hard Move</option>
+</select>
 <br>
+<h2> Please add Y if you want to paralyse opponent. </h2>
 <br>
-<%=@game.player1.show_name%>  : <%=@game.player1.get_score%>HP
+<input type="text" name="paralyse" value="N"<br>
 <br>
-<%=@game.player2.show_name%>  : <%=@game.player2.get_score%>HP
-<br>
-<a href="/attack">Attack</a>
+<button type="submit" value="Submit">Attack</button>

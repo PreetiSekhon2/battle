@@ -15,11 +15,17 @@ class Player
   end
 
   def decrease_score
-    @score -= 10
+    @score -= Random.rand(1..10)
   end
 
-  def receive_damage
-    decrease_score
+  def increase_score
+    @score += Random.rand(1..10)
+  end
+
+  def receive_damage(move)
+    (move.to_i).times do
+      decrease_score
+    end
   end
 
 end
